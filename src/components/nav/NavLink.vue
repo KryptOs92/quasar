@@ -1,9 +1,9 @@
 <template>
   <q-item
     clickable
+    class="text-white"
     tag="a"
-    target="_blank"
-    :href="props.link"
+    :to="props.link"
   >
     <q-item-section
       v-if="props.icon"
@@ -13,15 +13,15 @@
     </q-item-section>
 
     <q-item-section>
-      <q-item-label>{{ props.title }}</q-item-label>
-      <q-item-label caption>{{ props.caption }}</q-item-label>
+      <q-item-label class="text-white">{{ props.title }}</q-item-label>
+      <q-item-label class="text-white">{{ props.caption }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>
 
 <script setup>
 defineOptions({
-  name: 'EssentialLink'
+  name: 'NavLink'
 })
 
 const props = defineProps({
